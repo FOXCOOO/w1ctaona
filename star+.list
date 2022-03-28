@@ -1,6 +1,6 @@
-DOMAIN-SUFFIX,starplus.com,Star+
-DOMAIN-SUFFIX,starott.com,Star+
-DOMAIN,star.api.edge.bamgrid.com,Star+
-DOMAIN,star.connections.edge.bamgrid.com,Star+
-DOMAIN,star.content.edge.bamgrid.com,Star+
-DOMAIN,star.playback.edge.bamgrid.com,Star+
+DOMAIN-SUFFIX,starplus.com
+DOMAIN-SUFFIX,starott.com
+DOMAIN,star.api.edge.bamgrid.com
+DOMAIN,star.connections.edge.bamgrid.com
+DOMAIN,star.content.edge.bamgrid.com
+DOMAIN,star.playback.edge.bamgrid.com
