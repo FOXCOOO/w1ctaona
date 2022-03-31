@@ -1,2 +1,6 @@
 USER-AGENT,Deezer*
 DOMAIN-SUFFIX,deezer.com
+DOMAIN,a-api.dzcdn.net
+DOMAIN,a-cdn-files.dzcdn.net
+DOMAIN,api.dzcdn.net
+DOMAIN,www.dzcdn.net
