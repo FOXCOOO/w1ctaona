@@ -1,7 +1,6 @@
 DOMAIN,cdn-assets.dzcdn.net
 DOMAIN,cdn-content.dzcdn.net
 DOMAIN,cdn-files.dzcdn.net
-DOMAIN,cdn-images.dzcdn.net
 DOMAIN,cdn-preview-0.dzcdn.net
 DOMAIN,cdn-preview-1.dzcdn.net
 DOMAIN,cdn-preview-2.dzcdn.net
@@ -37,7 +36,6 @@ DOMAIN,cdn-proxy-f.dzcdn.net
 DOMAIN,cdns-assets.dzcdn.net
 DOMAIN,cdns-content.dzcdn.net
 DOMAIN,cdns-files.dzcdn.net
-DOMAIN,cdns-images.dzcdn.net
 DOMAIN,cdns-preview-0.dzcdn.net
 DOMAIN,cdns-preview-1.dzcdn.net
 DOMAIN,cdns-preview-2.dzcdn.net
@@ -71,7 +69,6 @@ DOMAIN,cdns-proxy-d.dzcdn.net
 DOMAIN,cdns-proxy-e.dzcdn.net
 DOMAIN,cdns-proxy-f.dzcdn.net
 DOMAIN,cdnt-files.dzcdn.net
-DOMAIN,cdnt-images.dzcdn.net
 DOMAIN,cdnt-proxy-0.dzcdn.net
 DOMAIN,cdnt-proxy-1.dzcdn.net
 DOMAIN,cdnt-proxy-2.dzcdn.net
@@ -88,12 +85,9 @@ DOMAIN,cdnt-proxy-c.dzcdn.net
 DOMAIN,cdnt-proxy-d.dzcdn.net
 DOMAIN,cdnt-proxy-e.dzcdn.net
 DOMAIN,cdnt-proxy-f.dzcdn.net
-DOMAIN,weight-images.deezer.com
-DOMAIN,weight-images.dzcdn.net
 DOMAIN,e-cdn-assets.dzcdn.net
 DOMAIN,e-cdn-content.dzcdn.net
 DOMAIN,e-cdn-files.dzcdn.net
-DOMAIN,e-cdn-images.dzcdn.net
 DOMAIN,e-cdn-preview-0.dzcdn.net
 DOMAIN,e-cdn-preview-1.dzcdn.net
 DOMAIN,e-cdn-preview-2.dzcdn.net
@@ -129,7 +123,6 @@ DOMAIN,e-cdn-proxy-f.dzcdn.net
 DOMAIN,e-cdns-assets.dzcdn.net
 DOMAIN,e-cdns-content.dzcdn.net
 DOMAIN,e-cdns-files.dzcdn.net
-DOMAIN,e-cdns-images.dzcdn.net
 DOMAIN,e-cdns-preview-0.dzcdn.net
 DOMAIN,e-cdns-preview-1.dzcdn.net
 DOMAIN,e-cdns-preview-2.dzcdn.net
@@ -163,7 +156,6 @@ DOMAIN,e-cdns-proxy-d.dzcdn.net
 DOMAIN,e-cdns-proxy-e.dzcdn.net
 DOMAIN,e-cdns-proxy-f.dzcdn.net
 DOMAIN,e-cdnt-files.dzcdn.net
-DOMAIN,e-cdnt-images.dzcdn.net
 DOMAIN,e-cdnt-proxy-0.dzcdn.net
 DOMAIN,e-cdnt-proxy-1.dzcdn.net
 DOMAIN,e-cdnt-proxy-2.dzcdn.net
@@ -180,5 +172,3 @@ DOMAIN,e-cdnt-proxy-c.dzcdn.net
 DOMAIN,e-cdnt-proxy-d.dzcdn.net
 DOMAIN,e-cdnt-proxy-e.dzcdn.net
 DOMAIN,e-cdnt-proxy-f.dzcdn.net
-DOMAIN,e-weight-images.deezer.com
-DOMAIN,e-weight-images.dzcdn.net
