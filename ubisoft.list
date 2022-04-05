@@ -3,3 +3,6 @@ DOMAIN-SUFFIX,ubisoft-orbit-savegames.s3.amazonaws.com
 DOMAIN-SUFFIX,ubisoft-uplay-savegames.s3.amazonaws.com
 DOMAIN-SUFFIX,ubisoft.com
 DOMAIN-SUFFIX,uplay.com
+DOMAIN-KEYWORD,ubisoft
+DOMAIN-KEYWORD,uplay
+DOMAIN-KEYWORD,ubionline
