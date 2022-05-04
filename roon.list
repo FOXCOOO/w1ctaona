@@ -3,5 +3,6 @@ IP-CIDR,104.22.14.70/32,no-resolve
 IP-CIDR,35.231.208.158/32,no-resolve
 IP-CIDR,13.225.150.50/32,no-resolve
 IP-CIDR,52.208.252.206/32,no-resolve
+IP-CIDR,63.34.178.171/32,no-resolve
 DOMAIN-KEYWORD,roonlabs
 DOMAIN-KEYWORD,roon
