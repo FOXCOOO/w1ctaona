@@ -5,3 +5,4 @@ DOMAIN,heads4-ak-spotify-com.akamaized.net
 DOMAIN,audio-ak-spotify-com.akamaized.net
 DOMAIN,audio4-ak-spotidy-com.akamaized.net
 DOMAIN,audio-akp-quic-spotify-com.akamaized.net
+DOMAIN-SUFFIX,spotify-com.akamaized.net
