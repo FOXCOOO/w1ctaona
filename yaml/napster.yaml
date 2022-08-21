@@ -1,0 +1,10 @@
+payload:
+  - DOMAIN,napster.com
+  - DOMAIN,cdn-la1.rhapsody.com
+  - DOMAIN,www.napster.com
+  - DOMAIN,direct.rhapsody.com
+  - DOMAIN,api.napster.com
+  - DOMAIN,napi.prod.napster.com
+  - DOMAIN,sdk.iad-01.braze.com
+  - DOMAIN-SUFFIX,napster.com
+  - DOMAIN-SUFFIX,rhapsody.com
