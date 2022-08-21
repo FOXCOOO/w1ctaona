@@ -1,0 +1,9 @@
+payload:
+  - DOMAIN,sp-ad-cf.audio.tidal.com
+  - DOMAIN,ab-pr-cf-audio.tidal.com
+  - DOMAIN,vb-ad-cf,video.tidal.com
+  - DOMAIN,im-cf-manifest.tidal.com
+  - DOMAIN,sp-pr-fa.audio.tidal.com
+  - DOMAIN,ab-pr-fa.audio.tidal.com
+  - DOMAIN,vb-ad-fa.video.tidal.com
+  - DOMAIN,im-fa.manifest.tidal.com
