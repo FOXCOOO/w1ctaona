@@ -3,7 +3,7 @@
 # 来源：https://easylist-downloads.adblockplus.org/easyprivacy.txt
 # 更新：2022-08-21 16:51:58
 # 数量：12624条
-
+payload:
   - DOMAIN-SUFFIX,0sbm.consobaby.co.uk
   - DOMAIN-SUFFIX,12build.actonservice.com
   - DOMAIN-SUFFIX,16ao.mathon.fr
