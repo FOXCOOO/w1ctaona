@@ -1,0 +1,161 @@
+payload:
+# 内容：国外媒体列表
+# 更新：2022-08-21 16:52:00
+# 数量：327条
+
+# ABC
+  - DOMAIN-SUFFIX,edgedatg.com
+  - DOMAIN-SUFFIX,go.com
+
+ # All4
+  - USER-AGENT,All4*
+  - DOMAIN-SUFFIX,c4assets.com
+  - DOMAIN-SUFFIX,channel4.com
+ # AppleNews
+  - USER-AGENT,AppleNews*
+  - USER-AGENT,com.apple.news*
+  - DOMAIN,gspe1-ssl.ls.apple.com
+# AppleTV
+  - DOMAIN,np-edge.itunes.apple.com
+  - DOMAIN,play-edge.itunes.apple.com
+  - DOMAIN-SUFFIX,tv.apple.com
+# BBCiPlayer
+  - USER-AGENT,BBCiPlayer*
+  - DOMAIN-KEYWORD,bbcfmt
+  - DOMAIN-KEYWORD,uk-live
+  - DOMAIN,aod-dash-uk-live.akamaized.net
+  - DOMAIN,aod-hls-uk-live.akamaized.net
+  - DOMAIN,vod-dash-uk-live.akamaized.net
+  - DOMAIN,vod-thumb-uk-live.akamaized.net
+  - DOMAIN-SUFFIX,bbc.co
+  - DOMAIN-SUFFIX,bbc.co.uk
+  - DOMAIN-SUFFIX,bbc.com
+  - DOMAIN-SUFFIX,bbc.net.uk
+  - DOMAIN-SUFFIX,bbcfmt.hs.llnwd.net
+  - DOMAIN-SUFFIX,bbci.co
+  - DOMAIN-SUFFIX,bbci.co.uk
+  - DOMAIN-SUFFIX,bidi.net.uk
+# EncoreTVB
+  - USER-AGENT,encoreTVB*
+  - DOMAIN,bcbolt446c5271-a.akamaihd.net
+  - DOMAIN,content.jwplatform.com
+  - DOMAIN,edge.api.brightcove.com
+  - DOMAIN,videos-f.jwpsrv.com
+  - DOMAIN-SUFFIX,encoretvb.com
+# FoxNow
+  - USER-AGENT,FOX%20NOW*
+  - DOMAIN-SUFFIX,fox.com
+  - DOMAIN-SUFFIX,foxdcg.com
+  - DOMAIN-SUFFIX,uplynk.com
+# HBO_GO_HKG
+  - USER-AGENT,HBO%20GO%20PROD*
+  - DOMAIN-KEYWORD,.hbogoasia.
+  - DOMAIN-KEYWORD,hbogoasia
+  - DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com
+  - DOMAIN,bcbolthboa-a.akamaihd.net
+  - DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net
+  - DOMAIN,dai3fd1oh325y.cloudfront.net
+  - DOMAIN,hboasia1-i.akamaihd.net
+  - DOMAIN,hboasia2-i.akamaihd.net
+  - DOMAIN,hboasia3-i.akamaihd.net
+  - DOMAIN,hboasia4-i.akamaihd.net
+  - DOMAIN,hboasia5-i.akamaihd.net
+  - DOMAIN,hboasialive.akamaized.net
+  - DOMAIN,hbogoprod-vod.akamaized.net
+  - DOMAIN,hbolb.onwardsmg.com
+  - DOMAIN,hbounify-prod.evergent.com
+  - DOMAIN,players.brightcove.net
+  - DOMAIN,s3-ap-southeast-1.amazonaws.com
+  - DOMAIN-SUFFIX,hboasia.com
+  - DOMAIN-SUFFIX,hbogoasia.com
+  - DOMAIN-SUFFIX,hbogoasia.hk
+# HWTV
+  - USER-AGENT,HWTVMobile*
+  - DOMAIN-SUFFIX,5itv.tv
+  - DOMAIN-SUFFIX,ocnttv.com
+# ITV
+  - USER-AGENT,ITV_Player*
+  - DOMAIN,itvpnpmobile-a.akamaihd.net
+  - DOMAIN-SUFFIX,itv.com
+  - DOMAIN-SUFFIX,itvstatic.com
+# JOOX
+  - USER-AGENT,JOOX*
+  - USER-AGENT,WeMusic*
+  - DOMAIN-KEYWORD,jooxweb-api
+  - DOMAIN-SUFFIX,joox.com
+# Japonx
+  - DOMAIN-KEYWORD,japonx
+  - DOMAIN-KEYWORD,japronx
+  - DOMAIN-SUFFIX,japonx.com
+  - DOMAIN-SUFFIX,japonx.net
+  - DOMAIN-SUFFIX,japonx.tv
+  - DOMAIN-SUFFIX,japonx.vip
+  - DOMAIN-SUFFIX,japronx.com
+  - DOMAIN-SUFFIX,japronx.net
+  - DOMAIN-SUFFIX,japronx.tv
+  - DOMAIN-SUFFIX,japronx.vip
+ # KKBOX
+  - DOMAIN-SUFFIX,kfs.io
+  - DOMAIN-SUFFIX,kkbox.com
+  - DOMAIN-SUFFIX,kkbox.com.tw
+# KKTV
+  - USER-AGENT,KKTV*
+  - USER-AGENT,com.kktv.ios.kktv*
+  - DOMAIN,kktv-theater.kk.stream
+  - DOMAIN,theater-kktv.cdn.hinet.net
+  - DOMAIN-SUFFIX,kktv.com.tw
+  - DOMAIN-SUFFIX,kktv.me
+# LiTV
+  - DOMAIN,litvfreemobile-hichannel.cdn.hinet.net
+  - DOMAIN-SUFFIX,litv.tv
+# LineTV
+  - USER-AGENT,LINE%20TV*
+  - USER-AGENT,LINE*
+  - DOMAIN,d3c7rimkq79yfu.cloudfront.net
+  - DOMAIN-SUFFIX,d3c7rimkq79yfu.cloudfront.net
+  - DOMAIN-SUFFIX,linetv.tw
+  - DOMAIN-SUFFIX,profile.line-scdn.net
+# My5
+  - USER-AGENT,My5*
+  - DOMAIN,d349g9zuie06uo.cloudfront.net
+  - DOMAIN-SUFFIX,channel5.com
+  - DOMAIN-SUFFIX,my5.tv
+# MyTVSuper
+  - USER-AGENT,mytv*
+  - DOMAIN-KEYWORD,nowtv100
+  - DOMAIN-KEYWORD,rthklive
+  - DOMAIN,mytvsuperlimited.hb.omtrdc.net
+  - DOMAIN,mytvsuperlimited.sc.omtrdc.net
+  - DOMAIN-SUFFIX,mytvsuper.com
+  - DOMAIN-SUFFIX,tvb.com
+# Niconico
+  - USER-AGENT,Niconico*
+  - DOMAIN-SUFFIX,dmc.nico
+  - DOMAIN-SUFFIX,nicovideo.jp
+  - DOMAIN-SUFFIX,nimg.jp
+# PBS
+  - USER-AGENT,PBS*
+  - DOMAIN-SUFFIX,pbs.org
+# Pandora
+  - USER-AGENT,Pandora*
+  - DOMAIN-SUFFIX,pandora.com
+# Pornhub
+  - DOMAIN-SUFFIX,phncdn.com
+  - DOMAIN-SUFFIX,phprcdn.com
+  - DOMAIN-SUFFIX,pornhub.com
+  - DOMAIN-SUFFIX,pornhubpremium.com
+# SoundCloud
+  - USER-AGENT,SoundCloud*
+  - DOMAIN-SUFFIX,p-cdn.us
+  - DOMAIN-SUFFIX,sndcdn.com
+  - DOMAIN-SUFFIX,soundcloud.com
+# TaiWanGood 台湾好
+  - USER-AGENT,TaiwanGood*
+  - DOMAIN,hamifans.emome.net
+  - DOMAIN-SUFFIX,skyking.com.tw
+# YouTubeMusic
+  - USER-AGENT,*YouTubeMusic*
+  - USER-AGENT,*com.google.ios.youtubemusic*
+  - USER-AGENT,YouTubeMusic*
+  - USER-AGENT,com.google.ios.youtubemusic*
+  - DOMAIN,music.youtube.com
