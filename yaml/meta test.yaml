@@ -19,7 +19,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   Sub: &Sub
     type: http
-    url: https://gist.githubusercontent.com/FOXCOOO/7d92463e984d5481d9f469e987141667/raw/d64859f08d4dcca5ac97a12472dd56b8091b3ebe/gistfile1
+    url: 
     interval: 86400
     path: ./Sub/Sub.yaml
     health-check:
