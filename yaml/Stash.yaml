@@ -1,0 +1,1441 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: :9090
+
+
+#节点导入
+
+proxy-providers:
+  Self: &Self
+    type: http
+    url: https://gist.githubusercontent.com/FOXCOOO/71d49f044efe0bc423d7b6f1b88fbc2d/raw/b16b54a252687b03c2cffdbd790c2f3853bf9b52/Self.yaml
+    interval: 86400
+    health-check:
+      enable: true
+      interval: 1800
+      url: http://www.gstatic.com/generate_204
+  Sub: &Sub
+    type: http
+    url: https://gist.githubusercontent.com/FOXCOOO/7d92463e984d5481d9f469e987141667/raw/bf35a29659a97b54502ac0a3ed9abed5698749f0/sub.yaml
+    interval: 86400
+    health-check:
+      enable: true
+      interval: 1800
+      url: http://www.gstatic.com/generate_204
+      
+
+#节点组与分流组
+
+proxy-groups:
+
+  - name: 🇭🇰
+    type: select
+    use:
+     - Self
+     - Sub
+   
+  - name : 🇯🇵
+    type: select
+    use:
+      - Self
+      - Sub
+    
+  - name: 🇺🇲
+    type: select
+    use:
+      - Self
+      - Sub
+    
+  - name: 🇹🇼
+    type: select
+    use:
+      - Self
+      - Sub
+    
+  - name: 🇸🇬
+    type: select
+    use:
+      - Self
+      - Sub
+    
+  - name: 🇰🇷
+    type: select
+    use:
+      - Self
+      - Sub
+    
+  - name: 🇵🇭
+    type: select
+    use:
+      - Self
+      - Sub
+    
+  - name: 🇦🇺
+    type: select
+    use:
+      - Self
+      - Sub
+    
+  - name: 🇹🇷
+    type: select
+    use:
+      - Self
+      - Sub
+    
+  - name: 🇦🇷
+    type: select
+    use:
+      - Self
+      - Sub
+        
+  - name: 🚀
+    type: select
+    use:
+      - Self
+      
+  - name: ♻️
+    type: select
+    use:
+      - Self
+      
+  - name: 1️⃣
+    type: select
+    use:
+      - Self
+    
+  - name: 2️⃣
+    type: select
+    use:
+      - Self
+    
+  - name: 3️⃣
+    type: select
+    use:
+      - Self
+    
+  - name: 4️⃣
+    type: select
+    use:
+      - Self
+    
+  - name: 5️⃣
+    type: select
+    use:
+      - Self
+    
+  - name: 6️⃣
+    type: select
+    use:
+      - Self
+      - Sub
+    
+  - name: 7️⃣
+    type: select
+    use:
+      - Self
+      - Sub
+    
+  - name: 8️⃣
+    type: select
+    use:
+      - Self
+      - Sub
+    
+  - name: 9️⃣
+    type: select
+    use:
+      - Self
+      - Sub
+    
+  - name: 🔟
+    type: select
+    use:
+      - Self
+      - Sub
+    
+    
+  - name: ☁️ NEXTCLOUD
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 📱 Telegram
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 📠 Discord
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎼 Audio
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎶 Music
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎬 Youtube
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎬 Netflix
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎬 TikTok
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎬 Twitch
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎬 Formula1
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎬 Marquee tv
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎬 Prime Video
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎬 Discovery Plus
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎬 STAR+ video stream
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎬 STAR+
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎬 Disney
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎬 DAZN
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎬 HBO GO
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎬 HBO MAX
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎬 Hulu
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎬 Viu TV
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 📽️ EMBY
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 👙 PikPak
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 👙 DMM
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 👙 ExHentai
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 📺 巴哈姆特
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 📺 哔哩哔哩
+    type: select
+    proxies:
+      - DIRECT
+      - 🎯 全球直连
+      - 🇹🇼
+      - 🇭🇰
+
+  - name: 🌏 国内媒体
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🌏 国外网站
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🍎 Paypal
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 📢 GoogleFCM
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: Ⓜ️ OneDrive
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: Ⓜ️ Microsoft
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎮 XBOX
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🕹️ Steam
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🕹️ SteamCN
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🕹️ Epic
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🕹️ Ubisoft
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🕹️ EA
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🕹️ Sony
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: ⏳ BT&PT
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🔻 Download
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+      
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀
+      - ♻️
+      - 🇸🇬
+      - 🇭🇰
+      - 🇹🇼
+      - 🇯🇵
+      - 🇺🇲
+      - 🇰🇷
+      - 1️⃣
+      - 2️⃣
+      - 3️⃣
+      - 4️⃣
+      - 5️⃣
+      - 6️⃣
+      - 7️⃣
+      - 8️⃣
+      - 9️⃣
+      - 🔟
+
+      
+#分流规则订阅
+
+rule-providers:
+
+  🎯 全球直连CHINADOMAIN:
+      behavior: domain
+      url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+      interval: 86400
+
+  🎯 全球直连LocalAreaNetwork:
+      behavior: ipcidr
+      url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
+      interval: 86400
+      
+  🎯 全球直连UnBan:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/%E5%85%A8%E7%90%83%E7%9B%B4%E8%BF%9EUnBan.yaml
+      interval: 86400
+      
+  🛑 广告拦截:
+      behavior: domain
+      url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+      interval: 86400  
+      
+  ☁️ NEXTCLOUD:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/ovhfoxcoo.yaml
+      interval: 86400
+      
+     
+  🎮 XBOX:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/XBOX.yaml
+      interval: 86400
+     
+  Ⓜ️ OneDrive:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/onedrive.yaml
+      interval: 86400
+     
+  Ⓜ️ Microsoft:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/Microsoft.yaml
+      interval: 86400
+     
+  🍎 Paypal:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/paypal.yaml
+      interval: 86400
+     
+  📱 Telegram:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/telegram.yaml
+      interval: 86400
+     
+  📠 Discord:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/discord.yaml
+      interval: 86400
+     
+  👙 DMM:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/DMM.yaml
+      interval: 86400
+     
+  👙 ExHentai:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/exhentai.yaml
+      interval: 86400
+     
+     
+  🎼  Audio:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/audio.yaml
+      interval: 86400
+     
+  🎶 Music:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/music.yaml
+      interval: 86400
+     
+  🕹️ Epic:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/epic.yaml
+      interval: 86400
+
+  🕹️ SteamCN:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/steamcn.yaml
+      interval: 86400
+     
+  🕹️ Steam:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/steam.yaml
+      interval: 86400
+     
+  🎬 Youtube:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/youtube.yaml
+      interval: 86400
+     
+  🎬 Netflix:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/netflix.yaml
+      interval: 86400
+     
+  🎬 TikTok:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/tiktok.yaml
+      interval: 86400
+     
+  🎬 Twitch:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/twitch.yaml
+      interval: 86400
+     
+  🎬 Formula1:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/Formula1.yaml
+      interval: 86400
+     
+  🎬 Marquee tv:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/marqueetv.yaml
+      interval: 86400
+     
+  🎬 Prime Video:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/primevideo.yaml
+      interval: 86400
+     
+  🎬 Discovery Plus:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/discoveryplus.yaml
+      interval: 86400
+     
+  🎬 STAR+ video stream:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/STAR%2B%20video%20stream.yaml
+      interval: 86400
+     
+  🎬 STAR+:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/starplus.yaml
+      interval: 86400
+     
+  🎬 Disney:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/disney.yaml
+      interval: 86400
+     
+  🎬 DAZN:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/DAZN.yaml
+      interval: 86400
+     
+  🎬 HBO GO:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/hboasia.yaml
+      interval: 86400
+     
+  🎬 HBO MAX:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/hbomax.yaml
+      interval: 86400
+     
+  🎬 Hulu:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/hulu.yaml
+      interval: 86400
+     
+  🎬 Viu TV:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/viutv.yaml
+      interval: 86400
+     
+  📽️ EMBY:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/emby.yaml
+      interval: 86400
+     
+  👙 PikPak:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/pikpak.yaml
+      interval: 86400
+     
+  📺 巴哈姆特:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/bahamt.yaml
+      interval: 86400
+     
+  📺 哔哩哔哩:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/bilibili.yaml
+      interval: 86400
+     
+     
+  🌏 国外网站:
+      behavior: domain
+      url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+      interval: 86400
+     
+  ⏳ BT&PT:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/BTPT.yaml
+      interval: 86400
+     
+  🌏 国外网站GFW:
+      behavior: domain
+      url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
+      interval: 86400
+     
+  🎯 全球直连CHINAIP:
+      behavior: ipcidr
+      url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+      interval: 86400
+     
+     
+  🔻 Download:
+      behavior: classical
+      url: https://raw.githubusercontent.com/FOXCOOO/w1ctaona/main/yaml/Download.yaml
+      interval: 86400
+     
+
+
+
+
+  
+#分流规则
+rules:
+  - RULE-SET,🛑 广告拦截,🛑 广告拦截
+  - RULE-SET,🎯 全球直连LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,🎯 全球直连UnBan,🎯 全球直连
+  - RULE-SET,☁️ NEXTCLOUD,☁️ NEXTCLOUD
+  - RULE-SET,🎮 XBOX,🎮 XBOX
+  - RULE-SET,Ⓜ️ OneDrive,Ⓜ️ OneDrive
+  - RULE-SET,Ⓜ️ Microsoft,Ⓜ️ Microsoft
+  - RULE-SET,🍎 Paypal,🍎 Paypal
+  - RULE-SET,📱 Telegram,📱 Telegram
+  - RULE-SET,📠 Discord,📠 Discord
+  - RULE-SET,👙 DMM,👙 DMM
+  - RULE-SET,👙 ExHentai,👙 ExHentai
+  - RULE-SET,🎼 Audio,🎼 Audio
+  - RULE-SET,🎶 Music,🎶 Music
+  - RULE-SET,🕹️ Epic,🕹️ Epic
+  - RULE-SET,🕹️ SteamCN,🕹️ SteamCN
+  - RULE-SET,🕹️ Steam,🕹️ Steam
+  - RULE-SET,🎬 Youtube,🎬 Youtube
+  - RULE-SET,🎬 Netflix,🎬 Netflix
+  - RULE-SET,🎬 TikTok,🎬 TikTok
+  - RULE-SET,🎬 Twitch,🎬 Twitch
+  - RULE-SET,🎬 Formula1,🎬 Formula1
+  - RULE-SET,🎬 Marquee tv,🎬 Marquee tv
+  - RULE-SET,🎬 Prime Video,🎬 Prime Video
+  - RULE-SET,🎬 Discovery Plus,🎬 Discovery Plus
+  - RULE-SET,🎬 STAR+ video stream,🎬 STAR+ video stream
+  - RULE-SET,🎬 STAR+,🎬 STAR+
+  - RULE-SET,🎬 Disney,🎬 Disney
+  - RULE-SET,🎬 DAZN,🎬 DAZN
+  - RULE-SET,🎬 HBO GO,🎬 HBO GO
+  - RULE-SET,🎬 HBO MAX,🎬 HBO MAX
+  - RULE-SET,🎬 Hulu,🎬 Hulu
+  - RULE-SET,🎬 Viu TV,🎬 Viu TV
+  - RULE-SET,📽️ EMBY,📽️ EMBY
+  - RULE-SET,👙 PikPak,👙 PikPak
+  - RULE-SET,📺 巴哈姆特,📺 巴哈姆特
+  - RULE-SET,📺 哔哩哔哩,📺 哔哩哔哩
+  - RULE-SET,🌏 国外网站,🌏 国外网站
+  - RULE-SET,⏳ BT&PT,⏳ BT&PT
+  - RULE-SET,🌏 国外网站GFW,🌏 国外网站
+  - RULE-SET,🎯 全球直连CHINAIP,🎯 全球直连
+  - RULE-SET,🎯 全球直连CHINADOMAIN,🎯 全球直连
+  - RULE-SET,🔻 Download,🔻 Download
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
