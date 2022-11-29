@@ -23,7 +23,6 @@ payload:
   
   
 
-  - USER-AGENT,Deezer*
   - DOMAIN,a-api.dzcdn.net
   - DOMAIN,a-cdn-files.dzcdn.net
   - DOMAIN,api.deezer.com
