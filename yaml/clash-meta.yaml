@@ -12,7 +12,7 @@ external-controller: :9090
 proxy-providers:
   Self: &Self
     type: http
-    url: https://gist.githubusercontent.com/FOXCOOO/71d49f044efe0bc423d7b6f1b88fbc2d/raw/6383a54b8177da598b4b91b21b499af00ea05a53/Self.yaml
+    url: 
     interval: 86400
     path: ./Self.yaml
     health-check:
@@ -21,7 +21,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   Sub: &Sub
     type: http
-    url: https://gist.githubusercontent.com/FOXCOOO/7d92463e984d5481d9f469e987141667/raw/bf35a29659a97b54502ac0a3ed9abed5698749f0/sub.yaml
+    url: 
     interval: 86400
     health-check:
     path: ./Sub.yaml
