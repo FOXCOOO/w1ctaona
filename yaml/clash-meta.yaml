@@ -23,8 +23,8 @@ proxy-providers:
     type: http
     url: 
     interval: 86400
-    health-check:
     path: ./Sub.yaml
+    health-check:
       enable: true
       interval: 1800
       url: http://www.gstatic.com/generate_204
