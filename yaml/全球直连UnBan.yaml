@@ -9,6 +9,7 @@ payload:
   #  Google
   - DOMAIN,dl.google.com
   - DOMAIN-SUFFIX,googletraveladservices.com
+  - DOMAIN-SUFFIX,google.com
 
   #  Mozilla
   - DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net
